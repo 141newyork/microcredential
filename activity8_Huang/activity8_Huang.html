@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Khanh : activity 8</title>
+  </head>
+  <body>
+    <h1>khanh : activity 8 - function </h1>
+    <script type="text/javascript">
+    /*
+      //example 1/ without parameter or return value: define a function that will print a message
+      function msg(){
+        console.log("hello!");
+      }
+      // exmaple 2) define a function called print out the number from 3 to 1
+      function printCount(){
+        for(let i= 3; i>=1;i-=1){
+          console.log(i);
+        }
+      }
+      // example 3) define a function that takes a parameter as name and print the argument value in the console
+      function greeting(name){
+        console.log(`Hello ${name}`)
+      }
+      // example 4) with parameter define a function that will take a message as an argument and convert its value in toUpperCase
+      function upperMessage(message){
+        let upper = message.toUpperCase();
+        console.log(upper);
+      }
+      //example 5) function with multiple parameters no return value: define a function that will take two parameters, firstName and lastName, and print the first name with the initial letter of the last name.
+      function greet(firstName,lastName){
+        console.log(`hello ${firstName} ${lastName[0].toUpperCase()}`);
+      }
+      //example 6) define a function with two parameters, message and numCount. The function will print the message and numCount. The function will print the message numCount times.
+      function printMsg(message,numCount){
+        for(counter = 1;counter <= numCount; counter ++){
+          console.log(`counter ${counter} = ${message}`);
+        }
+      }
+      //example 7) without parameter but return value: define function that return the sum of 2 numebrs
+      function sumXY(){
+        let x = 7,y=-3
+        return x + y // return will break(stop) the function
+      }
+      //example 10) with
+      let a = 5/6,b=3,c=9,d=-5
+      function sumNum(num1,num2){
+        let sum = num1 +num2
+        return sum
+      }
+      let number1 = sumNum(10,d)
+      let number2 = sumNum(a,c)
+      //example 11 define function check if temp greater than 75
+      function isShortsWeather(temperature)
+      {
+        if(temperature >= 75){return true}
+        else{return false;}
+
+      }
+      //example 12 define funtion accept array
+      function lastElement(arrayInput){
+        if(arrayInput === undefined) {return null}
+        else if(arrayInput.length !== 0 ){
+          let lastIndex = arrayInput.length - 1;
+          return arrayInput[lastIndex]
+        }
+        else{return null}
+      }
+
+    //example 13) math function in JS
+    let numPI = Math.PI;
+    console.log(`PI value = ${numPI}`);
+    console.log(`PI value = ${Math.round(numPI)}`);
+    console.log(`PI value = ${Math.ceil(numPI)}`);
+    console.log(`PI value = ${Math.floor(numPI)}`);
+    console.log(`PI value = ${Math.trunc(numPI)}`);
+    console.log(`PI value = ${Math.pow(2,3)}`);
+    console.log(`PI value = ${Math.sqrt(85)}`);
+    console.log(`PI value = ${Math.random()}`);
+
+    // example 14/ create a function that randomly generate a number 10-20
+    function pickNum(){
+      let pick = 10 + Math.round(math.random()*20)
+      return pick
+    }
+    */
+    function  checkName()
+    {
+      let name = prompt('Please enter a name: ');
+ while (name == undefined || name == null || isNaN(name) == false )
+ {
+   if(name == undefined ){
+     name = prompt(`You forgot to enter a name. Enter a name again:`);
+
+   }
+     else if (name == null  ){
+      name = prompt(`${name} is null`);
+     }
+     else if(isNaN(name) == false  ){
+       name = prompt(`${name} is invalid! Enter a name again:`);
+     }
+ }
+    console.log("Welcome " + name.toUpperCase() + " to the class!");
+    }
+    function checkNum()
+    {
+       let num = prompt('Please enter a number: ');
+      while (num == undefined || num == null || isNaN(num) == true )
+     {
+       if(isNaN(num) == true){
+          num = prompt(num+' is not a valid number.Please enter a valid number: ');
+       }else if (num == null){
+         num = prompt('You forgot to enter a number.Please enter a valid number: ');
+       }else if (num == undefined){
+         num = prompt('You forgot to enter a number.Please enter a valid number: ');
+       }
+     }
+        if(isNaN(num) == false && num%2==0)
+        {
+          console.log(true);
+
+        }else if (isNaN(num) == false && num %2 == 1)
+        {
+          console.log(false);
+        }
+    }
+    function lottery(num)
+    {
+      for (let i = 0 ; i < num; i++)
+      {
+        console.log(  `(5)[${Math.round( Math.random()*99)},${Math.round( Math.random()*99)},${Math.round( Math.random()*99)},${Math.round( Math.random()*99)},${Math.round( Math.random()*99)}]`);
+      }
+    }
+    </script>
+  </body>
+</html>
