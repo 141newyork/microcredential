@@ -1,0 +1,83 @@
+.banner
+{
+  padding: 60px;
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+  background: white;
+  color: white;
+  border-radius: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.logo
+{
+  width: 20%;
+
+   background-color: transparent;
+   margin-left:0%;
+   top: 20%;
+   position: absolute;
+   color:rgb(46, 173, 95);
+   animation: logoJump 0.2s;
+   animation-delay: 2.5s;
+   animation-fill-mode: forwards;
+}
+@keyframes logoJump
+{
+   0%{opacity:1;}
+   20%{opacity:0;}
+   40%{opacity:1;}
+   60%{opacity:0;}
+   80%{opacity:1;}
+   90%{opacity:0;}
+   100%{opacity:1;}
+   from{transform: translateX(0%);}
+   to{transform: translateX(390%);}
+}
+.img_container{
+  border: solid 10px ; width: 100%;margin: auto;
+
+}
+.part1{
+
+    float: left;
+    width: 49%;
+    padding: 1px;
+
+}
+.food  {
+  background-color: red;
+  border-radius: 100px;
+  color: yellow;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: center;
+  font-size: 16px;
+  margin-left: 35%;
+
+  transition-duration: 0.4s;
+}
+
+.nature  {
+  background-color: red; /* Green */
+  border-radius: 100px;
+  color: yellow;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: center;
+  font-size: 16px;
+  margin-left: 50%;
+
+  transition-duration: 0.4s;
+
+}
+
+.nature:hover, .food:hover {
+  background-color: blue;
+  color: white;
+}
