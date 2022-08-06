@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Khanh - activity 15</title>
+  </head>
+  <body>
+    <h1>Khanh - activity 15</h1>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script type="text/javascript">
+      // making a specific request using API headers
+      const getYear = async()=>{
+        const config = {headers: {Accept : 'application/json'}}
+        const res = await axios.get('https://swapi.dev/api/people/1/')
+        console.log("using headers in axios. NAME: ",res.data.name,"BIRTH YEAR: ",res.data.birth_year);
+      }
+      //chosing specific response
+      const personID = async(id)=>{
+        try {
+          const res = await axios.get(`https://swapi.dev/api/people/${id}`)
+          console.log(res.data);
+        } catch (e){
+          console.log("ERROR",e);
+        }
+      }
+      // making request using axios
+
+      // try and catch statement in fetch
+      // making multiple request using fetch
+      const loadPeople = async()=>{
+        try{
+          const res = await fetch("https://swapi.dev/api/people/1/")
+          constdata = await res.json()
+          console.log(`Multiple response using fetch, 1st person`,data);
+          const res2 = await fetch("https://swapi.dev/api/people/1/")
+          const data2 = await res2.json()
+          console.log(`Multiple response using fetch, 2nd person`,data2);
+
+      } catch (e){
+          console.log("ERROR!",e);
+      }}
+      // making an AJAX request using fetch
+      fetch("https://swapi.dev/api/people/1/")
+      .then((res)=>{
+  console.log("LOADED!: using fetch",res);
+  res.json().then((data)=>console.log("JSON result using fetch",data))
+})
+//making an AJAAX request using SHR
+      const req = new XMLHttpRequest();
+      req.onload = function()
+    {
+      console.log('LOADED!');
+      console.log(this.response);
+      const person = JSON.parse(this.response)
+      console.log(`NAME: ${person.name}, HEIGHT: ${person.height}`);
+    }
+      req.onerror = function(){
+        console.log('ERROR!');
+        console.log(this);
+      }
+      req.open("GET","https://swapi.dev/api/people/1/");
+      req.send();
+    </script>
+  </body>
+</html>

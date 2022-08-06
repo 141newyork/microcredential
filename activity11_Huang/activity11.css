@@ -1,0 +1,16 @@
+body{
+  background-color: purple;
+}
+*{box-sizing: border-box;}
+.colorContainer{
+  width:50%;
+  height: 200px;
+  border:ridge 10px gray;
+  margin: 2em auto;
+  #btnColor{
+    background-color: lightgray;color purple; padding:0.5em;
+    border-radius:1em;
+    margin: 5em 30%; width: 30%;
+  }
+
+}
