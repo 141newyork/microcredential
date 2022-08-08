@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Form Sent!</title>
+        
+    </head>
+    <body>
+        <h1>Your form has been submitted!</h1>
+        <p>First Name:<span id="storedFN"></span></p>
+        <p>Last Name: <span id="storedLN"></span></p>
+        <a href="activity12_Huang.html">BACK</a>
+
+
+        <script type="text/javascript">
+            console.log(localStorage.getItem('FN'));
+            const storedFN = document.querySelector('#storedFN')
+            const storedLN = document.querySelector('#storedLN')
+            storeFN.innerHTML = localStorage.getItem('FN')
+            storeLN.innerHTML = localStorage.getItem('LN')
+        </script>
+    </body>
+</html>

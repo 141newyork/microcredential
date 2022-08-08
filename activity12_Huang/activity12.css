@@ -1,10 +1,74 @@
 *{box-sizing: border-box;}
 html{scroll-behavior: smooth;}
+/*forms*/
+.input{
+  display: block;margin:2em;
+}
+.input1{
+  background-color: darkgray;border-radius: 12px;padding: 0.2em 1em;
+
+}
+.input1:hover{background-color: lightgray;color: red;box-shadow: 0px 0px 2px 2px gray;}
+
+/*slideshow*/
+.container_slideshow{
+  border: solid red;
+  width: 80%;
+  margin:2em auto;
+  overflow: hidden;
+  position: relative;
+}
+.slide, .slideAuto{
+  border: solid green;
+  width: 90%;
+  margin-left: 5%;
+  position: relative;
+  display: none;
+  animation: slideAnimation 1s;
+}
+@keyframes slideAnimation{
+  0%{transform: translateX(50px);}
+  100%{transform: translateX(0px);}
+}
+.slide img{
+  width: 100%;
+  vertical-align: middle;
+}
+.slide p,.slideAuto p{
+  position:absolute;
+  left: 100%;
+  right: 100%;
+  bottom: -10%;
+  text-align: center;
+  font-size: 5em;
+  color: white;
+
+}
+.prev, .next{
+  position: absolute;
+  top: 60%;
+  font-size: 3em;
+  color: white;
+  display: inline-block;
+  padding: 0.5em 1em;
+
+}
+.prev{
+  left:15%;
+}
+.next{
+  right:15%;
+}
+.prev:hover,.next:hover{
+  background-color: rgba(220,220,220,0.8);
+
+}
+/*PRACTICE*/
 .container {
   border: solid gray;
   width:100%; height:200px;box-shadow: 1px 1px 5px gray;
   display: inline-block; width:100% ; margin-bottom:3em;}
-}
+
 .title{
   border:solid red;
   width:100%;
@@ -20,6 +84,40 @@ html{scroll-behavior: smooth;}
   width:33%;
   height:80%;
 
+}
+/* card activity*/
+.mainTitle{
+text-align: center; color: orange;padding: 2em;
+
+}
+.cardContainer{
+  width: 100%;display: inline-block;
+}
+.nav{
+  width: 100%;
+
+}
+.nav a{
+  border:solid green;
+  background-color: orange;
+  width: 32.9%;
+  padding: 1em;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: darkblue;
+}
+.nav:hover{
+  background-color: blue;
+  color: orange;
+}
+
+@media only screen and (max-width:800px){
+  body{background-color: pink;}
+  .card{height:500px;}
+  .title{height: 8%;font-size: 3em;overflow: hidden;color: purple;}
+  .intro{height: 50%;width: 100%;}
+  .footer{width: 100%;height: 42%;}
 }
 .mainTitle{
   text-align: center;color:orange;padding:1em;
@@ -52,8 +150,41 @@ color:orange;}
   .nav a{
     width: 32%;
   }
+  /*nav*/
+  .card{
+    width:32%;
+  }
+  /*card*/
   .card{
     width:47.5%;
-    margin-left:10%
+    margin-left:2%;
+    margin-top:2em;
   }
+}
+@media only screen and (max-width:600px){
+  nav a{
+    width: 80%;
+    margin-left: 10%;
+  }
+  .card{
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+.card{
+  border: gray solid;
+  box-shadow: 1px 1px 3px gray;
+  width: 23%;
+  margin-left: 1%;
+  height: 100%;
+  float: left;
+}
+.card h3{
+  text-align: center;
+  padding: 0.5em;
+  color: orange;
+
+}
+.card p{
+  padding: 0.5em;
 }

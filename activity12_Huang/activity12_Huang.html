@@ -4,24 +4,138 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Activity 12 - Khanh Huang</title>
+    <title>Activity 12 - Khanh Huang responsive webpage</title>
     <link rel="stylesheet" href="activity12.css">
   </head>
   <body>
+     <!--FORMS-->
+       <form id="myForm" action="sentForm.html" method="post">        
+        <label for="firstN">First Name: <input type="text" name="firstName" id="firstN"></label>
+        
+        <label for="lastN">Last Name: <input type="text" name="lastName" id="lastN"></label>
+          <input type="submit" value="SUBMIT" class="input1">
+        <input type="text" name="username" value="" maxlength="20" placeholder="Up to 20 characters">
+        <input type="password" name="" value="" placeholder="up to 8 characters" maxlength="8" id ="myPassword">
+        <a id="viewPassword">View Password</a>
+        <!--example 4-->
+        <p>select your favorite animal</p>
+        <label for="cat">cats</label>
+        <br>
+        <label>Dog <input type="checkbox" name="animals" value="dog">
+        </label>
+        <input type="checkbox" name="animals" value="cat" id="cat">
+        <!--example 5 -->
+        <h3>select a gender</h3>
+        <label>Female <input type="radio" name="gender" value="female"></label>
+        <label>Male <input type="radio" name="gender" value="male"></label>
+        <label>Others <input type="radio" name="gender" value="others"></label>
+      </form>  
+      <hr>
+      <!--example 6-->
+      <form action="https://www.google.com/search">
+        <input type="search" name="q" placeholder="Search">
+        <button>Search at Google</button>
+      </form>
+      <form action="https://www.youtube.com/results">
+        <input type="search" name="search_query" placeholder="Search">
+        <button>Search at Youtube</button>
+      </form>
+      <label for="date">Select appointment date</label>
+      <input type="date" name="appointment" value="" id="date">
+
+
+
+
+
+
+      <hr>
+    <!--slideshow-->
+    <h1>Manual slideshow</h1>
+    <section class="container_slideshow"></section>
+    <div class="slide">
+      <img src="images/spring.jpeg">
+      <p>Spring</p>
+    </div>
+    <div class="slide">
+      <img src="images/summer1.webp">
+      <p>Summer</p>
+    </div>
+    <div class="slide">
+      <img src="images/fall.jpg">
+      <p>Fall</p>
+    </div>
+    <div class="slide">
+      <img src="images/winter.jpeg">
+      <p>Winter</p>
+    </div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+      <!--automation slideshow-->
+      <h1>Automation slideshow</h1>
+      <section class="container_slideshow"></section>
+      <div class="slideAuto">
+        <img src="images/spring.jpeg">
+        <p>Spring</p>
+      </div>
+      <div class="slideAuto">
+        <img src="images/summer1.webp">
+        <p>Summer</p>
+      </div>
+      <div class="slideAuto">
+        <img src="images/fall.jpg">
+        <p>Fall</p>
+      </div>
+      <div class="slideAuto">
+        <img src="images/winter.jpeg">
+        <p>Winter</p>
+      </div>
+  
+    <!--Practice-->
     <h1>Khanh Huang</h1>
+    <section class="container">
+      <header class="title">TITLE
+
+      </header> 
+      <main class="intro">
+        INTRODUCTION
+      </main>
+      <footer class="footer"> CONTACT US</footer>
+    </section>
+    <!--responsive -->
+    <h1 class="mainTitle">Four seasons</h1>
+    <nav class="nav">
+      <a href="https://www1.nyc.gov" target="_blank">NYC</a>
+      <a href="https://www1.cuny.edu" target="_blank">CUNY</a>
+      <a href="https://www1.gcc.cuny.edu" target="_blank">QCC</a>
+    </nav>
+    <section class="cardContainer">
+      <!--card 1-->
+      <div class="card">
+        <img src="images/spring.jpeg" alt="image of spring">
+        <h3>Spring</h3>
+        <p>Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae</p>
+      </div>
+        <!--card 2-->
+        <div class="card">
+          <img src="images/summer1.webp" alt="image of summer">
+          <h3>Summer</h3>
+          <p>Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae</p>
+        </div>
+          <!--card 3-->
+      <div class="card">
+        <img src="images/fall.jpg" alt="image of fall">
+        <h3>Fall</h3>
+        <p>Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae</p>
+      </div>
+        <!--card 4-->
+        <div class="card">
+          <img src="images/winter.jpeg" alt="image of winter">
+          <h3>Winter</h3>
+          <p>Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae</p>
+        </div>
+    </section>
     <script type="text/javascript" src ="activity12.js"></script>
     <div class="">
-    <h3>spring</h3>
-    <p>Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae</p>
-
-
-    </div>
-    <div class="card">
-      <img src="images/summer.jpg" alt = "image of summer">
-      <h3>Summer</h3>
-      <p>Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae</p>
-    </div>
-
   </body>
   <form id="myForm" action="sentForm.html" method="post">
   <input type="submit"  value="SUBMIT">
