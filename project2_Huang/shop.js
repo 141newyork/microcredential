@@ -23,17 +23,22 @@ function ready() {
         button.addEventListener('click', addToCartClicked)
     }
 
-    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+   // document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
+const firstName = document.querySelector('#firstN')
+const lastName = document.querySelector('#lastN')
+const purchaseForm = document.querySelector('.input1')
+purchaseForm.addEventListener('click',
 function purchaseClicked() {
-    alert('Thank you for your purchase')
+    localStorage.setItem('FN',firstName.value);
+    sessionStorage.setItem('LN',lastName.value);
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
     }
     updateCartTotal()
-}
+})
 
 function removeCartItem(event) {
     var buttonClicked = event.target
